@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Motion Agency" />
+	
+	<link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+	
+	
+	<!-- Stylesheets
+	============================================= -->
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/swiper.min.css">
+
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<!-- Slider
+	============================================= -->
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/slider/modernizr.custom.js"></script>
+	
+	<!-- Document Title
+	============================================= -->
+	<title>Bac et Déco</title>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header-bac" class="sticky-style-2">
+
+			<div class="container clearfix">
+
+				<!-- Logo
+				============================================= -->
+				<div id="logo">
+					<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
+					<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+				</div><!-- #logo end -->
+
+				<ul class="header-extras">
+					<li>
+						<img src="images/1.png" alt="Canvas Logo"><br>
+						<div class="he-text">
+							Avenue Moncef Bey , <br>
+							8050 Hammamet Tunisie
+						</div>
+					</li>
+					<li>
+						<img src="images/2.png" alt="Canvas Logo"><br>
+						<div class="he-text">
+							(+216) 52 121 415<br> 
+							(+216) 50 561 415
+						</div>
+					</li>
+					<li>
+						<img src="images/3.png" alt="Canvas Logo"><br>
+						<div class="he-text">
+							contact@latouchevegetale.com
+						</div>
+					</li>
+				</ul>
+
+			</div>
+		</header><!-- #header end -->
+
+		<!-- Primary Navigation
+		============================================= -->
+		<div class="mbackground"></div>
+		<nav id="primary-menu" class="style-2">
+
+			<div class="container clearfix">
+
+				<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+				<ul>
+					<li><a href="index.html"><div>Accueil</div></a></li>
+					<li><a href="#"><div>Présentation</div></a></li>
+					<li><a href="product.html"><div>Nos Bacs</div></a></li>
+					<li><a href="#"><div>Réalisations</div></a></li>
+					<li><a href="#"><div>Espace Professionnel</div></a></li>
+					<li><a href="contact.html"><div>Contact</div></a></li>
+					<li><a href="#"><div class="button-red nott"><i class="far fa-file-alt"></i>Devis gratuit</div></a></li>
+				</ul>
+			</div>
+
+		</nav><!-- #primary-menu end -->	
+
+				
+		<!--<section id="slider" class="swiper_wrapper clearfix">
+		
+			<div class="swiper-container swiper-parent">
+				<div class="swiper-wrapper">
+					
+					<div class="main">
+						<ul id="cbp-bislideshow" class="cbp-bislideshow">
+							<li class="box"><img class="cover" src="images/slider/1.png" alt=""/></li>
+						</ul>
+						<div id="cbp-bicontrols" class="cbp-bicontrols">
+							<span class="cbp-biprev"><i class="fas fa-angle-left"></i></span>
+							<span class="cbp-binext"><i class="fas fa-angle-right"></i></span>
+						</div>
+					</div>
+										
+					<script type="text/javascript">
+					$('.box').each(function() {
+						//set size
+						var th = $(this).height(),//box height
+							tw = $(this).width(),//box width
+							im = $(this).children('img'),//image
+							ih = im.height(),//inital image height
+							iw = im.width();//initial image width
+						if (ih>iw) {//if portrait
+							im.addClass('ww').removeClass('wh');//set width 100%
+						} else {//if landscape
+							im.addClass('wh').removeClass('ww');//set height 100%
+						}
+						//set offset
+						var nh = im.height(),//new image height
+							nw = im.width(),//new image width
+							hd = (nh-th)/2,//half dif img/box height
+							wd = (nw-tw)/2;//half dif img/box width
+						if (nh<nw) {//if portrait
+							im.css({marginLeft: '-'+wd+'px', marginTop: 0});//offset left
+						} else {//if landscape
+							im.css({marginTop: '-'+hd+'px', marginLeft: 0});//offset top
+						}
+					});
+					</script>
+
+					<div class="container clearfix">
+						<div class="slider-caption-place">
+						<img src="images/4.png">
+						<div class="slider-captions">
+							<h1 class="uppercase">Lorem ipsum</h1>
+							<p id="word">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nisi a felis scelerisque congue. Vivamus leo nisi, gravida id nunc iaculis tincidunt.</p>
+							<a href="#" class="button-red">Lire plus</a>
+						</div>
+						<script type="text/javascript">
+							$(function () {
+							  count = 0;
+							  wordsArray = [
+								"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nisi a felis scelerisque congue. Vivamus leo nisi, gravida id nunc iaculis tincidunt.",
+								"Gravida id nunc iaculis, tincidunt venenatis elit. Nunc dignissim vestibulum varius.",
+								"Semper, nulla magna mollis mi, at convallis nulla tellus id tellus."
+							  ];
+							  setInterval(function () {
+								count++;
+								$("#word").fadeOut(400, function () {
+								  $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
+								});
+							  }, 9000);
+							});
+						</script>
+					</div>
+					</div>	
+					
+
+
+				</div>
+			</div>
+
+			
+		</section>-->
+
+		<section id="slider" class="slider-element slider-parallax" style="background: url('images/slider/1.png'); background-size: cover;" data-height-xl="704" data-height-lg="690" data-height-md="400" data-height-sm="250" data-height-xs="200">
+			<div class="slider-parallax-inner">
+				<div class="container clearfix">
+				
+					<div class="slider-caption-place">
+						<img src="images/4.png">
+						<div class="slider-captions">
+							<h1 class="uppercase">Lorem ipsum</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nisi a 
+							felis scelerisque congue. Vivamus leo nisi, gravida id nunc iaculis, tincidunt
+							venenatis elit. Nunc dignissim vestibulum varius. Nullam varius, ipsum ut venenatis 
+							semper, nulla magna mollis mi, at convallis nulla tellus id tellus.</p>
+							<a href="#" class="button-red w39">Lire plus</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+
+		<!-- Content About
+		============================================= -->
+		<section id="content" class="about-bgpic">
+
+			<div class="content-wrap">
+
+				<div class="container clearfix">
+					
+					<div class="col_full">
+						<div class="heading-block uppercase noborder">
+							<h1>à propos de nous</h1>
+						</div>
+					</div>
+					
+					<div class="col-lg-2 bottommargin-sm">
+						<img class="years nomargin" src="images/5.png" alt="" width="124" height="222">
+					</div>
+
+					<div class="col-lg-5 bottommargin-sm">
+						<p class="nomargin noleftpadding norightpadding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper fermentum 
+						leo at luctus. Proin metus turpis, sodales eu metus vitae, dapibus rutrum augue. Maecenas 
+						venenatis blandit tristique. Vestibulum euismod gravida ornare. Cras facilisis velit pretium,
+						fringilla ligula vel, iaculis nisl. In ut ligula vel elit eleifend mollis. Mauris consectetur
+						pellentesque magna nec accumsan. Integer finibus dolor id lorem convallis hendrerit. Nullam 
+						bibendum tempus diam, id lacinia purus elementum ac. Ut vitae est et ex rutrum aliquet vel 
+						id justo. Suspendisse hendrerit sagittis erat vitae pretium. Sed in diam eu turpis facilisis
+						rutrum ut sed nisi. Donec auctor magna a massa bibendum mattis. </p>
+					</div>
+
+					<div class="col-lg-5 bottommargin-sm">
+						<p class="nomargin noleftpadding norightpadding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper fermentum 
+						leo at luctus. Proin metus turpis, sodales eu metus vitae, dapibus rutrum augue. Maecenas 
+						venenatis blandit tristique. Vestibulum euismod gravida ornare. Cras facilisis velit pretium,
+						fringilla ligula vel, iaculis nisl. In ut ligula vel elit eleifend mollis. Mauris consectetur
+						pellentesque magna nec accumsan. Integer finibus dolor id lorem convallis hendrerit. Nullam 
+						bibendum tempus diam, id lacinia purus elementum ac. Ut vitae est et ex rutrum aliquet vel 
+						id justo. Suspendisse hendrerit sagittis erat vitae pretium. Sed in diam eu turpis facilisis
+						rutrum ut sed nisi. Donec auctor magna a massa bibendum mattis. </p>
+					</div>			
+					
+					<div class="col_full nomargin">
+						<a href="#" class="button-red-bordered fright">Lire plus</a>
+					</div>
+					
+				</div>
+			</div>
+				
+
+		</section><!-- #content end -->
+		
+		<!-- Content Products
+		============================================= -->
+		<section id="content" class="">
+
+			<div class="content-wrap">
+
+				<div class="container clearfix">
+					
+					<div class="col_full">
+						<div class="heading-block color noborder">
+							<h1 class="green">Nos Produits</h1>
+						</div>
+						<span class="fadeIn animated">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.ante venenatis dapibus posuere velit aliquet.<span>
+					</span></span>
+					</div>
+					
+					<div class="col-md-4 bottommargin-lg fadeIn animated padding-sm">
+						<div class="feature-box media-box">
+							<div class="fbox-media">
+								<img src="images/product.png" alt="">
+							</div>
+							<div class="fbox-desc">
+								<h1 class="color uppercase">Cubique</h1>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4 bottommargin-lg fadeIn animated padding-sm">
+						<div class="feature-box media-box">
+							<div class="fbox-media">
+								<img src="images/product.png" alt="">
+							</div>
+							<div class="fbox-desc">
+								<h1 class="color uppercase">Cubique</h1>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4 bottommargin-lg fadeIn animated padding-sm">
+						<div class="feature-box media-box">
+							<div class="fbox-media">
+								<img src="images/product.png" alt="">
+							</div>
+							<div class="fbox-desc">
+								<h1 class="color uppercase">Cubique</h1>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 bottommargin-lg fadeIn animated padding-sm">
+						<div class="feature-box media-box">
+							<div class="fbox-media">
+								<img src="images/product.png" alt="">
+							</div>
+							<div class="fbox-desc">
+								<h1 class="color uppercase">Cubique</h1>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4 bottommargin-lg fadeIn animated padding-sm">
+						<div class="feature-box media-box">
+							<div class="fbox-media">
+								<img src="images/product.png" alt="">
+							</div>
+							<div class="fbox-desc">
+								<h1 class="color uppercase">Cubique</h1>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4 bottommargin-lg fadeIn animated padding-sm">
+						<div class="feature-box media-box">
+							<div class="fbox-media">
+								<img src="images/product.png" alt="">
+							</div>
+							<div class="fbox-desc">
+								<h1 class="color uppercase">Cubique</h1>
+							</div>
+						</div>
+					</div>					
+					
+				</div>
+			</div>
+				
+
+		</section><!-- #content end -->
+		
+		
+		<!-- Content Invoice
+		============================================= -->
+		
+		<section id="content" class="ovisible invoice-bgpic">
+			<div class="promo promo-light promo-full">
+				<div class="container clearfix">
+					<h3 class="uppercase">Votre Devis Gratuit !</h3>
+					<span>Faites votre demande de devis en ligne. C’est simple, et gratuit !</span>
+					<a href="contact.html" class="button-red button button-xlarge"><i class="far fa-file-alt"></i>Devis gratuit</a>
+				</div>
+			</div>			
+		</section>
+		
+		<!-- Content Realisations
+		============================================= -->
+		<section id="content" class="">
+
+			<div class="content-wrap">
+
+				<div class="container clearfix">
+					
+					<div class="col_full">
+						<div class="heading-block color noborder">
+							<h1 class="green">Nos Réalisations</h1>
+						</div>
+					</div>
+					
+					<div class="col-lg-6 swiper-container bottommargin-sm">
+						 <div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="nomargin" src="images/gallery/1.png" alt="" >
+							</div>
+							<div class="swiper-slide">
+								<img class="nomargin" src="images/gallery/2.png" alt="" >
+							</div>
+							<div class="swiper-slide">
+								<img class="nomargin" src="images/gallery/3.png" alt="" >
+							</div>
+							<div class="swiper-slide">
+								<img class="nomargin" src="images/gallery/4.png" alt="" >
+							</div>
+							<div class="swiper-slide">
+								<img class="nomargin" src="images/gallery/1.png" alt="" >
+							</div>
+							<div class="swiper-slide">
+								<img class="nomargin" src="images/gallery/2.png" alt="" >
+							</div>
+							<div class="swiper-slide">
+								<img class="nomargin" src="images/gallery/3.png" alt="" >
+							</div>
+							<div class="swiper-slide">
+								<img class="nomargin" src="images/gallery/4.png" alt="" >
+							</div>
+						</div>
+						
+						<div class="swiper-button-prev"><i class="fas fa-angle-left"></i></div>
+						<div class="swiper-button-next"><i class="fas fa-angle-right"></i></div>
+					</div>							
+				
+					
+					
+					<div class="col-lg-6 bottommargin-sm" >
+						<img class="plants nomargin" src="images/plants.png" alt="" style="position: absolute; top: -220px;" >
+					</div>
+					
+				</div>
+			</div>
+				
+
+		</section><!-- #content end -->
+		
+		<!-- Footer
+		============================================= -->
+		<footer id="footer">
+
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap clearfix">
+				
+						<div class="widget clearfix">
+							<div class="col_one_third widget_links nopadding nomargin black-border-right">
+								<img src="images/logo.png" width="230px" alt="" class="footer-logo">
+								<ul>
+									<li><a href="index.html">Accueil</a></li>
+									<li><a href="#">Présentation</a></li>
+									<li><a href="product.html">Nos Bacs</a></li>
+									<li><a href="#">Réalisations</a></li>
+									<li><a href="#">Espace Professionnel</a></li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</div>	
+
+							<div class="col_one_third nopadding black-border-right">
+								<ul class="header-extras1">
+									<li class="noborder">
+										<img src="images/1.png" alt="Canvas Logo"><br>
+										<div class="he-text">
+											Avenue Moncef Bey , <br>
+											8050 Hammamet Tunisie
+										</div>
+									</li>
+									<li class="noborder">
+										<img src="images/2.png" alt="Canvas Logo"><br>
+										<div class="he-text">
+											(+216) 52 121 415<br> 
+											(+216) 50 561 415
+										</div>
+									</li>
+									<li class="noborder">
+										<img src="images/3.png" alt="Canvas Logo"><br>
+										<div class="he-text">
+											contact@latouchevegetale.com
+										</div>
+									</li>
+								</ul>
+							</div>
+							
+							<div class="col_one_third col-xs-6 col_last nopadding">
+								<h3>Retrouver Nous</h3>
+								<div class="socials-section">
+									<a href="#" class="social-icon nobottommargin">
+										<i class="fab fa-facebook-f hoverd" aria-hidden="true"></i>
+										<i class="fab fa-facebook-f" aria-hidden="true"></i>
+									</a>
+									<a href="#" class="social-icon nobottommargin">
+										<i class="fab fa-instagram hoverd" aria-hidden="true"></i>
+										<i class="fab fa-instagram" aria-hidden="true"></i>
+									</a>
+									<a href="#" class="social-icon nobottommargin">
+										<i class="fab fa-linkedin-in hoverd" aria-hidden="true"></i>
+										<i class="fab fa-linkedin-in" aria-hidden="true"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+
+				</div>
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container clearfix">
+
+					<div class="col_half">
+						<p class="nomargin">Bac et Deco © 2018 All rights reserved.</p>
+					</div>
+
+					<!--<div class="col_half col_last tright">
+						<div class="copyrights-menu copyright-links clearfix">
+							<a href="index.html">Home</a>/<a href="about.html">About Us</a>/<a href="service1.html">Services</a>/<a href="contact.html">Contact</a>
+						</div>
+					</div>-->
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script src="js/slider/jquery.imagesloaded.min.js"></script>
+	<script src="js/slider/cbpBGSlideshow.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			cbpBGSlideshow.init();
+		});
+	</script>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 2,
+		slidesPerColumn: 2,
+		spaceBetween: 50,
+		
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			1199: {
+			  slidesPerView: 4,
+			  slidesPerColumn: 1,
+			  spaceBetween: 30,
+			},
+
+			1024: {
+			  slidesPerView: 3,
+			  slidesPerColumn: 1,
+			  spaceBetween: 30,
+			},
+			768: {
+			  slidesPerView: 2,
+			  slidesPerColumn: 1,
+			  spaceBetween: 30,
+			},
+			640: {
+			  slidesPerView: 2,
+			  slidesPerColumn: 1,
+			  spaceBetween: 20,
+			},
+			477: {
+			  slidesPerView: 1,
+			  slidesPerColumn: 1,
+			  spaceBetween: 10,
+			}
+		}
+      
+		});
+	</script>
+
+</body>
+</html>
