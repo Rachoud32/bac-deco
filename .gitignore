@@ -1,3 +1,7 @@
+/* Basic settings */
 .idea/*
 config/*
 .htaccess
+
+/* Upload files of product */
+admin/upload_files/*

@@ -1,5 +1,7 @@
 <?php
-require_once("../../config/db.php");
+require_once("../../../config/db.php");
+require_once("../../controller/dimension/dimensionController.php");
+require_once("../../controller/product/productController.php");
 ?>
 <html>
 <head>
@@ -10,10 +12,9 @@ require_once("../../config/db.php");
 <?php
 $db = new Database();
 $pdo_conn = $db->connect();
-$pdo_statement = $pdo_conn->prepare("SELECT * FROM product ORDER BY id DESC");
-$pdo_statement->execute();
-$result = $pdo_statement->fetchAll();
-$db->closeConnection($pdo_conn);
+$productController = new ProductController();
+$dimensionController = new DimensionController();
+$result = $productController->getAllProducts($pdo_conn);
 ?>
 <div class="create_button"><a href="add.php" class="button_link"><img src="../../assets/img/add.png" title="Add New Product"
                                                                       class="add-icon"/>Create</a></div>
@@ -22,10 +23,14 @@ $db->closeConnection($pdo_conn);
     <tr>
         <th class="table-header" width="20%">Reference</th>
         <th class="table-header" width="20%">Name</th>
+        <th class="table-header" width="20%">Picture</th>
         <th class="table-header" width="40%">Description</th>
         <th class="table-header" width="40%">Quantity</th>
         <th class="table-header" width="20%">Price</th>
+        <th class="table-header" width="20%">Water reserve</th>
         <th class="table-header" width="20%">Created date</th>
+        <th class="table-header" width="20%">Updated date</th>
+        <th class="table-header" width="20%">Dimension</th>
         <th class="table-header" width="5%">Actions</th>
     </tr>
     </thead>
@@ -37,22 +42,34 @@ $db->closeConnection($pdo_conn);
             <tr class="table-row">
                 <td><?php echo $row["reference"]; ?></td>
                 <td><?php echo $row["name"]; ?></td>
+                <td><?php echo $row["picture"]; ?></td>
                 <td><?php echo $row["description"]; ?></td>
                 <td><?php echo $row["quantity"]; ?></td>
                 <td><?php echo $row["price"]; ?></td>
+                <td><?php echo ($row["water_reserve"] == 1 ? 'Yes' : 'No') ; ?></td>
                 <td><?php echo $row["created"]; ?></td>
+                <td><?php echo $row["updated"]; ?></td>
+                <td>
+                    <?php
+                        $dimension = $dimensionController->getDimensionById($pdo_conn, $row["dimension_id"]);
+                        if (!empty($dimension)) {
+                            echo $dimension[0]['diameter'] . ' ' . $dimension[0]['height'] . ' ' . $dimension[0]['qube'];
+                        }
+                    ?>
+                </td>
                 <td>
                     <a class="ajax-action-links" href='edit.php?id=<?php echo $row['id']; ?>'>
-                        <img src="crud-icon/edit.png" title="Edit"/>
+                        <img src="../../assets/img/edit.png" title="Edit"/>
                     </a>
                     <a class="ajax-action-links" href='delete.php?id=<?php echo $row['id']; ?>'>
-                        <img src="crud-icon/delete.png" title="Delete"/>
+                        <img src="../../assets/img/delete.png" title="Delete"/>
                     </a>
                 </td>
             </tr>
             <?php
         }
     }
+    $db->closeConnection($pdo_conn);
     ?>
     </tbody>
 </table>

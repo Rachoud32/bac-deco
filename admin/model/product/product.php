@@ -5,11 +5,14 @@ class Product
     private $id;
     private $reference;
     private $name;
+    private $picture;
     private $description;
     private $quantity;
     private $price;
     private $created;
     private $updated;
+    private $water_reserve;
+    private $dimension_id;
 
     function __construct()
     {
@@ -141,6 +144,54 @@ class Product
     public function setUpdated($updated)
     {
         $this->updated = $updated;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPicture()
+    {
+        return $this->picture;
+    }
+
+    /**
+     * @param mixed $picture
+     */
+    public function setPicture($picture)
+    {
+        $this->picture = $picture;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWaterReserve()
+    {
+        return $this->water_reserve;
+    }
+
+    /**
+     * @param mixed $water_reserve
+     */
+    public function setWaterReserve($water_reserve)
+    {
+        $this->water_reserve = $water_reserve;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDimensionId()
+    {
+        return $this->dimension_id;
+    }
+
+    /**
+     * @param mixed $dimension_id
+     */
+    public function setDimensionId($dimension_id)
+    {
+        $this->dimension_id = $dimension_id;
     }
 
 
